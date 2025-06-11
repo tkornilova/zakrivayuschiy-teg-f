@@ -11,10 +11,50 @@
 */
 
 .page {
+  margin: 0 auto;
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
   line-height: 21px;
+  background-color: beige;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: 'wght' var(--regular-fw);
+}
+
+.container {
+  margin: 100px auto 0;
+}
+
+.header {
+  font-family: var(--accent-font), sans-serif;
+  text-transform: uppercase;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid var(--main-black);
+  padding: 30px;
+  text-align: center;
+  background-color: var(--main-white);
+  max-inline-size: 700px;
+  min-block-size: 368px;
+
+  @media (width <= 375px) {
+    padding: 10px;
+    min-block-size: 327px;
+  }
+}
+
+.header__title {
+  font-size: clamp(3.063rem, 2.71rem + 1.69vw, 4.063rem);
+  line-height: 100%;
+}
+
+.header__subtitle {
+  font-size: clamp(0.875rem, 0.677rem + 0.951vw, 1.438rem);
+  line-height: 100%;
 }
