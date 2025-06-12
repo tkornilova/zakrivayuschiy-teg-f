@@ -42,6 +42,11 @@ ol {
   list-style: none;
 }
 
+img {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;

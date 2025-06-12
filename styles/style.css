@@ -1,15 +1,3 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
-
 .page {
   margin: 0 auto;
   font-family: var(--main-font), sans-serif;
@@ -22,7 +10,12 @@
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 100px auto 0;
+  max-inline-size: 700px;
 }
 
 .header {
@@ -31,16 +24,11 @@
 }
 
 .header__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 20px;
   border: 2px solid var(--main-black);
   padding: 30px;
   text-align: center;
   background-color: var(--main-white);
-  max-inline-size: 700px;
   min-block-size: 368px;
 
   @media (width <= 375px) {
@@ -57,4 +45,77 @@
 .header__subtitle {
   font-size: clamp(0.875rem, 0.677rem + 0.951vw, 1.438rem);
   line-height: 100%;
+}
+
+.card__list {
+  display: grid;
+  gap: 50px;
+  inline-size: 100%;
+}
+
+.card__item {
+  border: 2px solid var(--main-black);
+  background-color: var(--main-white);
+}
+
+.card__title {
+  border-block-end: 2px solid var(--main-black);
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-variation-settings: 'wght' var(--bold-fw);
+}
+
+.card__img-wrapper {
+  border-block-end: 2px solid var(--main-black);
+  overflow: hidden;
+  block-size: clamp(23.3125rem, 16.2042rem + 30.3286vw, 43.5rem);
+}
+
+.card__img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__description {
+  display: grid;
+  gap: 27px;
+  padding: 25px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-variation-settings: 'wght' var(--regular-fw);
+}
+
+.card__controls {
+  display: flex;
+  justify-content: end;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 0 25px 25px;
+}
+
+.card__icon-button {
+  align-self: center;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  block-size: 24px;
+}
+
+.card__like-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--main-black);
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  line-height: 90%;
+  background-color: var(--main-white);
+  cursor: pointer;
+  min-block-size: 38px;
+  inline-size: 130px;
 }
