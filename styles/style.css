@@ -3,7 +3,10 @@
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background-color: beige;
+  background-image: var(--gradient-bg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: 'wght' var(--regular-fw);
