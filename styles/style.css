@@ -71,15 +71,39 @@
 }
 
 .card__img-wrapper {
+  position: relative;
   border-block-end: 2px solid var(--main-black);
   overflow: hidden;
-  block-size: clamp(23.3125rem, 16.2042rem + 30.3286vw, 43.5rem);
+  block-size: clamp(23.3125rem, 16.1602rem + 30.5164vw, 43.625rem);
 }
 
 .card__img {
   display: block;
   object-fit: cover;
   object-position: center;
+}
+
+.card__img-text {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  color: black;
+  font-family: var(--accent-font), sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  text-shadow: var(--img-text-shadow);
+  mix-blend-mode: hard-light;
+
+  @media (width <= 375px) {
+    right: 11px;
+  }
+}
+
+@supports (text-shadow: var(--img-text-shadow)) {
+  .card__img-text {
+    text-shadow: var(--img-text-shadow);
+  }
 }
 
 .card__description {
