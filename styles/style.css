@@ -272,3 +272,36 @@
   mix-blend-mode: difference;
 }
 
+/* Filters */
+
+.blur .card__img {
+  filter: blur(2px);
+}
+
+.brightness .card__img {
+  filter: brightness(0.7);
+}
+
+.contrast .card__img {
+  filter: contrast(1.25);
+}
+
+.grayscale .card__img {
+  filter: grayscale(1);
+}
+
+.hue-rotate .card__img {
+  filter: hue-rotate(330deg);
+}
+
+.invert .card__img {
+  filter: invert(1);
+}
+
+.saturate .card__img {
+  filter: saturate(1.5);
+}
+
+.blur-hue-saturate .card__img {
+  filter: blur(2px) hue-rotate(330deg) saturate(1.5);
+}
