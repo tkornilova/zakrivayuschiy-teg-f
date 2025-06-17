@@ -176,10 +176,6 @@
   opacity: 0;
 }
 
-.like-icon {
-
-}
-
 .is-liked {
   --contour-color: rgba(255, 0, 0, 1);
   transition: transform 0.3s ease-in;
