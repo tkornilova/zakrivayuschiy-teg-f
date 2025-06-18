@@ -226,6 +226,11 @@
 }
 
 .card__like-button {
+  min-block-size: 38px;
+  inline-size: 130px;
+}
+
+.button {
   position: relative;
   display: flex;
   justify-content: center;
@@ -240,11 +245,9 @@
   background-color: var(--main-white);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
-  min-block-size: 38px;
-  inline-size: 130px;
 }
 
-.card__like-button::before {
+.button::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -253,16 +256,16 @@
   translate: -100%;
 }
 
-.card__like-button:hover::before {
+.button:hover::before {
   translate: 0;
 }
 
-.card__like-button:focus {
+.button:focus {
   box-shadow: none;
   outline: none;
 }
 
-.card__like-button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--main-black);
   outline: none;
 }
@@ -270,6 +273,82 @@
 .button__text {
   z-index: 1;
   mix-blend-mode: difference;
+}
+
+.save {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto 105px;
+}
+
+.save__button {
+  display: flex;
+  gap: 9px;
+  min-block-size: 54px;
+  inline-size: 338px;
+
+  @media (width <= 375px) {
+    flex-direction: column;
+    padding: 15px;
+    inline-size: 310px;
+  }
+}
+
+.save__svg {
+  fill: var(--main-white);
+  inline-size: 21px;
+  block-size: 21px;
+  mix-blend-mode: difference;
+
+  @media (width <= 375px) {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+}
+
+.popup:open {
+  display: grid;
+  gap: 28px;
+  border: 2px solid var(--main-black);
+  padding: 30px;
+  max-inline-size: 356px;
+  inline-size: 100%;
+
+  @media (width <= 375px) {
+    padding: 30px 40px;
+    max-inline-size: 341px;
+  }
+}
+
+.popup::backdrop {
+  opacity: 75%;
+  background-color: var(--main-black);
+}
+
+.popup__wrapper {
+  display: grid;
+  grid-template-columns: 39px 1fr;
+  gap: 20px;
+}
+
+.popup__svg {
+  align-self: center;
+  inline-size: 39px;
+  block-size: 39px;
+}
+
+.popup__title {
+  color: var(--main-black);
+  font-family: var(--accent-font), sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.popup__button {
+  padding: 12px;
 }
 
 /* Filters */
