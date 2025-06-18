@@ -254,12 +254,12 @@
 
 .is-liked .heart {
   transition-delay: 0.1s;
+  transform-origin: center;
   animation: scale 0.3s ease-in 0.1s;
 }
 
 .is-liked .sparks {
   transition-delay: 0.1s;
-  transform-origin: center;
   animation: sparks 0.3s ease-in 0.3s;
 }
 
