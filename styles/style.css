@@ -146,9 +146,10 @@
   }
 }
 
-@supports (-webkit-text-stroke: 1px var(--main-white)) {
+@supports ((text-stroke: 1px var(--main-white)) or (-webkit-text-stroke: 1px var(--main-white))) {
   .card__img-text {
     -webkit-text-stroke: 1px var(--main-white);
+    text-stroke: 1px var(--main-white);
   }
 }
 
