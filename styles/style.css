@@ -78,15 +78,9 @@
 .header__container {
   gap: 20px;
   border: 2px solid var(--main-black);
-  padding: 30px;
+  padding: clamp(7.4375rem, 7.2394rem + 0.8451vw, 8rem) clamp(0.625rem, 0.1849rem + 1.8779vw, 1.875rem);
   text-align: center;
   background-color: var(--main-white);
-  min-block-size: 368px;
-
-  @media (width <= 375px) {
-    padding: 10px;
-    min-block-size: 327px;
-  }
 }
 
 .header__logo {
