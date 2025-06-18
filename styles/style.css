@@ -1,3 +1,5 @@
+/* Общие стили элементов страницы */
+
 .page {
   margin: 0 auto;
   font-family: var(--main-font), sans-serif;
@@ -20,6 +22,53 @@
   margin: 100px auto 0;
   max-inline-size: 700px;
 }
+
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--main-black);
+  box-shadow: none;
+  overflow: hidden;
+  color: var(--main-white);
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  line-height: 90%;
+  background-color: var(--main-white);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--main-black);
+  transition: translate 0.5s ease;
+  translate: -100%;
+}
+
+.button:hover::before {
+  translate: 0;
+}
+
+.button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--main-black);
+  outline: none;
+}
+
+.button__text {
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+/* Шапка страницы */
 
 .header {
   font-family: var(--accent-font), sans-serif;
@@ -49,6 +98,8 @@
   font-size: clamp(0.875rem, 0.677rem + 0.951vw, 1.438rem);
   line-height: 100%;
 }
+
+/* Список карточек */
 
 .card__list {
   display: grid;
@@ -123,6 +174,13 @@
   gap: 6px;
   padding: 0 25px 25px;
 }
+
+.card__like-button {
+  min-block-size: 38px;
+  inline-size: 130px;
+}
+
+/* Кнопка с анимацией сердца */
 
 .card__icon-button {
   align-self: center;
@@ -225,55 +283,7 @@
   }
 }
 
-.card__like-button {
-  min-block-size: 38px;
-  inline-size: 130px;
-}
-
-.button {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid var(--main-black);
-  box-shadow: none;
-  overflow: hidden;
-  color: var(--main-white);
-  font-family: var(--accent-font), sans-serif;
-  font-size: 14px;
-  line-height: 90%;
-  background-color: var(--main-white);
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--main-black);
-  transition: translate 0.5s ease;
-  translate: -100%;
-}
-
-.button:hover::before {
-  translate: 0;
-}
-
-.button:focus {
-  box-shadow: none;
-  outline: none;
-}
-
-.button:focus-visible {
-  box-shadow: 2px 2px 0 0 var(--main-black);
-  outline: none;
-}
-
-.button__text {
-  z-index: 1;
-  mix-blend-mode: difference;
-}
+/* Блок с popup */
 
 .save {
   display: flex;
@@ -351,7 +361,7 @@
   padding: 12px;
 }
 
-/* Filters */
+/* Фильтры */
 
 .blur .card__img {
   filter: blur(2px);
