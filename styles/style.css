@@ -185,10 +185,6 @@
   block-size: 36px;
 }
 
-.card__icon-button:focus-visible {
-  outline: none;
-}
-
 /* Блок с popup */
 
 .save {
