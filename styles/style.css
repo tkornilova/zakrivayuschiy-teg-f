@@ -319,8 +319,6 @@
 }
 
 .popup:open {
-  display: grid;
-  gap: 28px;
   border: 2px solid var(--main-black);
   padding: 30px;
   max-inline-size: 356px;
@@ -335,6 +333,11 @@
 .popup::backdrop {
   opacity: 75%;
   background-color: var(--main-black);
+}
+
+.popup__form {
+  display: grid;
+  gap: 28px;
 }
 
 .popup__wrapper {
