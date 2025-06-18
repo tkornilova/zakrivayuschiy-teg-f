@@ -132,13 +132,13 @@
   position: absolute;
   top: 25px;
   right: 25px;
-  color: black;
+  opacity: 0.5;
+  color: var(--main-black);
   font-family: var(--accent-font), sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 100%;
-  -webkit-text-stroke: 1px var(--main-white);
-
+  text-shadow: var(--img-text-shadow);
   mix-blend-mode: hard-light;
 
   @media (width <= 375px) {
