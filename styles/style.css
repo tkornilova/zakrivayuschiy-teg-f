@@ -143,7 +143,8 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 100%;
-  text-shadow: var(--img-text-shadow);
+  -webkit-text-stroke: 1px var(--main-white);
+
   mix-blend-mode: hard-light;
 
   @media (width <= 375px) {
@@ -151,9 +152,9 @@
   }
 }
 
-@supports (text-shadow: var(--img-text-shadow)) {
+@supports (-webkit-text-stroke: 1px var(--main-white)) {
   .card__img-text {
-    text-shadow: var(--img-text-shadow);
+    -webkit-text-stroke: 1px var(--main-white);
   }
 }
 
