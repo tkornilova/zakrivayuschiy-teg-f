@@ -1,1 +1,1 @@
-https://github.com/tkornilova/slozhno-sosredotochitsya-fd
+https://github.com/tkornilova/zakrivayuschiy-teg-f
