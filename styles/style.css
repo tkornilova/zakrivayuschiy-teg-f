@@ -179,10 +179,20 @@
   align-self: center;
   border: none;
   padding: 0;
+  outline: 2px solid transparent;
   background-color: transparent;
+  transition: outline 0.3s ease;
   cursor: pointer;
   inline-size: 39px;
-  block-size: 36px;
+  block-size: 34px;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--main-black);
 }
 
 /* Блок с popup */
