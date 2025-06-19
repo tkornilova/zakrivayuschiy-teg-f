@@ -148,6 +148,7 @@
 
 @supports ((text-stroke: 1px var(--main-white)) or (-webkit-text-stroke: 1px var(--main-white))) {
   .card__img-text {
+    text-shadow: none;
     -webkit-text-stroke: 1px var(--main-white);
     text-stroke: 1px var(--main-white);
   }
